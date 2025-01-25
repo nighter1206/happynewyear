@@ -1,8 +1,8 @@
 <?php
 // 数据库连接配置
 $servername = "localhost";
-$username = "root";
-$password = "da92097df4ebbb58";
+$username = "";
+$password = "";
 $dbname = "snake_year_website";
 
 // 创建数据库连接
