@@ -1,0 +1,179 @@
+/* 定义颜色变量 */
+:root {
+    --primary-color: #ff0000;
+    --secondary-color: #daa520;
+    --tertiary-color: #8b0000;
+    --accent-color: #ffd700;
+    --input-bg-color: #ff4500;
+}
+
+/* 全局样式 */
+body {
+    font-family: 'SimSun', serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--tertiary-color);
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* 新年祈愿区域样式 */
+.wish-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.wish-input {
+    width: 60%;
+    height: 120px;
+    border: 3px solid var(--secondary-color);
+    background-color: var(--input-bg-color);
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    /* 优化输入框在不同浏览器的显示 */
+    box-sizing: border-box;
+}
+
+.submit-button {
+    width: 180px;
+    height: 70px;
+    background: linear-gradient(to bottom, var(--primary-color) 0%, var(--tertiary-color) 100%);
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    line-height: 70px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+}
+
+/* 祈愿展示区域样式 */
+.wish-display {
+    width: 60%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.wish-item {
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 15px 0;
+}
+
+.wish-item:last-child {
+    border-bottom: none;
+}
+
+.wish-item span {
+    font-weight: bold;
+}
+
+/* 烟花盛典区域样式 */
+.fireworks-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: var(--tertiary-color);
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.fireworks-button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 80px;
+    background: linear-gradient(to bottom, var(--accent-color) 0%, var(--secondary-color) 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    color: var(--tertiary-color);
+    font-size: 28px;
+    text-align: center;
+    line-height: 80px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.fireworks-button:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* 音乐控制区域样式 */
+.music-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.music-control select {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.music-control button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.music-control button:hover {
+    background-color: var(--accent-color);
+}
+
+/* 福字飘落样式 */
+.fu-character {
+    position: absolute;
+    top: -50px;
+    font-size: 30px;
+    color: var(--primary-color);
+    -webkit-text-stroke: 1px var(--secondary-color);
+    text-stroke: 1px var(--secondary-color);
+    animation: falling 10s linear forwards;
+}
+
+@keyframes falling {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 100vh;
+    }
+}
